@@ -1,0 +1,15 @@
+{
+  "name": "Bill Gates",
+  "bio": "Fundador de Microsoft y filántropo.",
+  "photo": "/images/personalities/bill-gates.png",
+  "recommendedBooks": [
+    {
+      "bookName": "the-power-of-habit",
+      "reason": "muy bueno the power of habit"
+    },
+    {
+      "bookName": "atomic-habits",
+      "reason": "muy bueno atomic habits"
+    }
+  ]
+}

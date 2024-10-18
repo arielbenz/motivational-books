@@ -1,0 +1,30 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const books = await getCollection("books");
+---
+
+<Layout title="Books">
+  <h1 class="text-black">Books</h1>
+
+  {
+    books.map((person) => {
+      const { title, description, cover } = person.data;
+
+      return (
+        <section class="p-4">
+          <div class="flex">
+            <article class="book-item">
+              <h2 class="p-4">{title}</h2>
+
+              <img class="max-w-48" src={cover} alt={title} />
+
+              <p class="p-4">{description}</p>
+            </article>
+          </div>
+        </section>
+      );
+    })
+  }
+</Layout>

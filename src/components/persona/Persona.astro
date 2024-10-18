@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+
+const { name, bio, photo } = Astro.props;
+---
+
+<article class="persona-item">
+  <div class="persona-item__image">
+    <Image src={photo} alt={name} width={200} height={200} />
+  </div>
+
+  <h2 class="py-4">{name}</h2>
+  <p class="py-4">{bio}</p>
+</article>
+
+<style>
+  .persona-item img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+  }
+</style>

@@ -1,0 +1,15 @@
+{
+  "name": "Elon Musk",
+  "bio": "Elon Reeve Musk, conocido como Elon Musk, es un empresario, inversor.",
+  "photo": "/images/personalities/elon-musk.png",
+  "recommendedBooks": [
+    {
+      "bookName": "the-power-of-habit",
+      "reason": "muy bueno the power of habit"
+    },
+    {
+      "bookName": "atomic-habits",
+      "reason": "muy bueno atomic habits"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+---
+import Book from "@/components/book/Book.astro";
+import Persona from "@/components/persona/Persona.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const personalities = await getCollection("personalities");
+---
+
+<Layout title="Personalities">
+  <h1 class="text-black">Personalities</h1>
+
+  {
+    personalities.map((person) => {
+      const { name, bio, recommendedBooks, photo } = person.data;
+
+      return (
+        <section class="p-4">
+          <Persona name={name} bio={bio} photo={photo} />
+
+          <div class="flex">
+            {recommendedBooks.map((bookItem) => {
+              const { bookName } = bookItem;
+
+              return <Book bookName={bookName} />;
+            })}
+          </div>
+        </section>
+      );
+    })
+  }
+</Layout>

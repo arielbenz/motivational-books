@@ -1,16 +1,15 @@
 ---
+import Hero from "@/components/hero/Hero.astro";
+import Personalities from "@/components/personalities/Personalities.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="Motivational Books">
   <main class="container">
-    <h1 class="text-black">Motivational Books</h1>
+    <Hero />
 
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto id
-      pariatur assumenda aperiam? Voluptas quis aut eos alias doloribus nam
-      aperiam? Eos, fugit quaerat consequuntur adipisci non natus at soluta.
-    </p>
+    <h2>Personalidades que recomiendan libros</h2>
+    <Personalities />
     
   </main>
 </Layout>

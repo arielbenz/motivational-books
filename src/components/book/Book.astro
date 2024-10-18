@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
+
+const { bookName } = Astro.props;
+
+const { data } = await getEntry("books", bookName);
+const { title, description, cover } = data;
+---
+
+<article class="book-item">
+  <h2 class="p-4">{title}</h2>
+  
+  <Image src={cover} alt={title} width={192} height={290} />
+
+  <p class="p-4">{description}</p>
+</article>

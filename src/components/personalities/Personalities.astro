@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import Persona from "../persona/Persona.astro";
+
+const personalities = await getCollection("personalities");
+---
+
+<article class="personalities-container grid gap-6 my-16">
+  {
+    personalities.map((person) => {
+      const { name, bio, photo } = person.data;
+      return <Persona name={name} bio={bio} photo={photo} />;
+    })
+  }
+</article>
+
+<style>
+  .personalities-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+</style>

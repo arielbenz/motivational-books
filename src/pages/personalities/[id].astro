@@ -1,0 +1,41 @@
+---
+import Book from "@/components/book/Book.astro";
+import Persona from "@/components/persona/Persona.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const personalities = await getCollection("personalities");
+
+  return personalities.map((persona) => ({
+    params: { id: persona.id },
+    props: { persona },
+  }));
+}
+
+const { persona } = Astro.props;
+const { data } = persona;
+const { name, bio, photo, recommendedBooks } = data;
+---
+
+<Layout title="">
+  <section class="persona-profile">
+    <Persona name={name} bio={bio} photo={photo} />
+
+    <div class="flex">
+      {
+        recommendedBooks.map((bookItem) => {
+          const { bookName } = bookItem;
+
+          return <Book bookName={bookName} />;
+        })
+      }
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  .persona-profile .persona-item__image {
+    max-width: 300px;
+  }
+</style>
