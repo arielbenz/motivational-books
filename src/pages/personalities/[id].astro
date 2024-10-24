@@ -1,6 +1,6 @@
 ---
-import Book from "@/components/Book.astro";
 import Persona from "@/components/Persona.astro";
+import RecommendedBooks from "@/components/RecommendedBooks.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
@@ -22,20 +22,30 @@ const { name, bio, photo, recommendedBooks } = data;
   <section class="persona-profile">
     <Persona name={name} bio={bio} photo={photo} />
 
-    <div class="flex">
-      {
-        recommendedBooks.map((bookItem) => {
-          const { bookName } = bookItem;
+    <h3 class="mt-12 text-2xl">Sus libros recomendados</h3>
 
-          return <Book bookName={bookName} />;
-        })
-      }
-    </div>
+    <RecommendedBooks {recommendedBooks} />
   </section>
 </Layout>
 
 <style is:global>
+  .persona-profile .persona-item {
+    display: flex;
+    gap: 50px;
+
+    h2 {
+      font-size: 40px;
+    }
+  }
   .persona-profile .persona-item__image {
     max-width: 300px;
+  }
+
+  .book-item {
+    display: flex;
+
+    img {
+      height: fit-content;
+    }
   }
 </style>

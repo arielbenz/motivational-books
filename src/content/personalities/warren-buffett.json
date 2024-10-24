@@ -1,7 +1,7 @@
 {
-  "name": "Mark Zuckerberg",
-  "bio": "Bio",
-  "photo": "/images/personalities/mark-zuckerberg.jpeg",
+  "name": "Warren Buffett",
+  "bio": "Elon Reeve Musk, conocido como Elon Musk, es un empresario, inversor.",
+  "photo": "/images/personalities/warren-buffett.jpg",
   "recommendedBooks": [
     {
       "bookName": "the-power-of-habit",

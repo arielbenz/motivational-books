@@ -1,16 +1,22 @@
 ---
 import { Image } from "astro:assets";
 
-const { name, bio, photo } = Astro.props;
+const { id, name, bio, photo, showBio = true } = Astro.props;
 ---
 
 <article class="persona-item">
   <div class="persona-item__image">
-    <Image src={photo} alt={name} width={200} height={200} />
+    <a href=`/personalities/${id}` target="_self">
+      <Image src={photo} alt={name} width={200} height={200} />
+    </a>
   </div>
 
-  <h2 class="py-4">{name}</h2>
-  <p class="py-4">{bio}</p>
+  <div class="persona-item__data">
+    <a href=`/personalities/${id}` target="_self" class="inline-flex">
+      <h2 class="py-4">{name}</h2>
+    </a>
+    {showBio && <p class="py-4">{bio}</p>}
+  </div>
 </article>
 
 <style>
@@ -18,5 +24,15 @@ const { name, bio, photo } = Astro.props;
     aspect-ratio: 1/1;
     object-fit: cover;
     width: 100%;
+  }
+
+  .persona-item__image a:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .persona-item__data a:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 </style>

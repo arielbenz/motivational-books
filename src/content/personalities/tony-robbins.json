@@ -1,7 +1,7 @@
 {
-  "name": "Mark Zuckerberg",
-  "bio": "Bio",
-  "photo": "/images/personalities/mark-zuckerberg.jpeg",
+  "name": "Tony Robbins",
+  "bio": "Elon Reeve Musk, conocido como Elon Musk, es un empresario, inversor.",
+  "photo": "/images/personalities/tony-robbins.webp",
   "recommendedBooks": [
     {
       "bookName": "the-power-of-habit",

@@ -1,7 +1,7 @@
 {
-  "name": "Mark Zuckerberg",
-  "bio": "Bio",
-  "photo": "/images/personalities/mark-zuckerberg.jpeg",
+  "name": "Sam Altman",
+  "bio": "Elon Reeve Musk, conocido como Elon Musk, es un empresario, inversor.",
+  "photo": "/images/personalities/sam-altman.webp",
   "recommendedBooks": [
     {
       "bookName": "the-power-of-habit",

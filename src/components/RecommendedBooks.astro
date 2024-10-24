@@ -1,0 +1,22 @@
+---
+import Book from "./Book.astro";
+
+const { recommendedBooks } = Astro.props;
+---
+
+<article class="recommended-books flex flex-col gap-14">
+  {
+    recommendedBooks.map((bookItem) => {
+      const { bookName } = bookItem;
+
+      return <Book bookName={bookName} />;
+    })
+  }
+</article>
+
+<style>
+  .recommended-books {
+
+  }
+
+</style>

@@ -5,13 +5,18 @@ import { getEntry } from "astro:content";
 const { bookName } = Astro.props;
 
 const { data } = await getEntry("books", bookName);
-const { title, description, cover } = data;
+const { title, description, cover, buyurl } = data;
 ---
 
 <article class="book-item">
-  <h2 class="p-4">{title}</h2>
-  
   <Image src={cover} alt={title} width={192} height={290} />
 
-  <p class="p-4">{description}</p>
+  <div class="book-item__data">
+    <h2 class="p-4">{title}</h2>
+    <p class="p-4">{description}</p>
+  </div>
+
+  <a href=`${buyurl.buscalibre}` class="btn btn-lg btn-accent">
+    Comprar en BuscaLibre
+  </a>
 </article>

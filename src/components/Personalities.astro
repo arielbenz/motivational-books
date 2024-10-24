@@ -9,7 +9,7 @@ const personalities = await getCollection("personalities");
   {
     personalities.map((person) => {
       const { name, bio, photo } = person.data;
-      return <Persona name={name} bio={bio} photo={photo} />;
+      return <Persona id={person.id} name={name} bio={bio} photo={photo} showBio={false} />;
     })
   }
 </article>

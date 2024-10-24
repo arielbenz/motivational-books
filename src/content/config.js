@@ -7,6 +7,10 @@ const bookCollection = defineCollection({
     author: z.string(),
     description: z.string(),
     cover: z.string(),
+    buyurl: z.object({
+      buscalibre: z.string(),
+      amazon: z.string(),
+    }),
   }),
 });
 
