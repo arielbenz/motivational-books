@@ -1,0 +1,15 @@
+{
+  "name": "Martina Navratilova",
+  "bio": "Elon Reeve Musk, conocido como Elon Musk, es un empresario, inversor.",
+  "photo": "/images/personalities/martina-navratilova.jpeg",
+  "recommendedBooks": [
+    {
+      "bookName": "the-power-of-habit",
+      "reason": "muy bueno the power of habit"
+    },
+    {
+      "bookName": "atomic-habits",
+      "reason": "muy bueno atomic habits"
+    }
+  ]
+}
